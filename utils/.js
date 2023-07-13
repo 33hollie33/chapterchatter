@@ -1,6 +1,10 @@
 function fetchDataFromAPI() {
-    var apiUrl = "https://console.cloud.google.com/AIzaSyBxj-ZkK9pnEnACEAfsr_YNYkeIa4IPt1k"; 
+    const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
+        searchQuery
+      )}&key=${apiKey}`;
+
     var apiKey = "AIzaSyBxj-ZkK9pnEnACEAfsr_YNYkeIa4IPt1k";
+    var axios = require ("axios");
   
     fetch(apiUrl)
       .then(response => response.json())
@@ -13,6 +17,11 @@ function fetchDataFromAPI() {
             var container = document.getElementById("container");
             container.appendChild(element);
         }
+        axios
+        .get(url)
+        .then((response) => {
+          console.log(response.data);
+        })
 
         console.log(data);
       })
