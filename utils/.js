@@ -4,7 +4,15 @@ function fetchDataFromAPI() {
   
     fetch(apiUrl)
       .then(response => response.json())
-      .then(data => {
+      .then(bookData => {
+
+        for (var i = 0; i <bookData.length; i++) {
+            var element = document.createElement("p");
+            element.textContent = bookData[i].name;
+
+            var container = document.getElementById("container");
+            container.appendChild(element);
+        }
         
         console.log(data);
       })
