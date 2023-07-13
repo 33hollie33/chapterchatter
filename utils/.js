@@ -4,7 +4,8 @@ function fetchDataFromAPI() {
       )}&key=${apiKey}`;
 
     var apiKey = "AIzaSyBxj-ZkK9pnEnACEAfsr_YNYkeIa4IPt1k";
-    var axios = require ("axios");
+    var axios = require ("axios")
+    const searchQuery = "Harry Potter";
   
     fetch(apiUrl)
       .then(response => response.json())
