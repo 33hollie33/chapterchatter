@@ -33,7 +33,7 @@ var displayBook = (bookData) => {
     document.getElementById("authors").textContent = `${bookAuthors}`;
     document.getElementById("description").textContent = `${bookDescription}`;
     document.getElementById("image").src = `${bookImg}`;
-    
+    console.log(bookImg);
 }
 const searchButton = document.getElementById("search");
 searchButton.addEventListener("click", onClickSearch);
