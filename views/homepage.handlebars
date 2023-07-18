@@ -1,24 +1,69 @@
-<!-- Loop over each object in the projects array -->
-{{#each books as |book| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{book.id}}">{{book.name}}</a>
-    </h2>
-    <p>
-      <span for="img" aria-label="money"></span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{book.title}}</span>
-    
-    </p>
-    <p>Created by {{book.user.name}} on {{format_date book.date_created}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{book.description}}
-    </p>
-  </div>
+
+ <img src="/images/logo.png" alt="logo" width="500x" height="200px" class="logo">
+    <header>
+        <nav>
+            <a class="active" href="#home">Home</a>
+            <a href="#mybooks"> My Books</a>
+            <a href="#browse">Browse & Review</a>
+            
+            
+        </nav>
+        
+         <section class="hero">
+            <div>
+               
+                <h2>Words<span>  Create </span>   Worlds  </h2>
+                <p> Welcome to our book community, a vibrant online platform designed for book lovers, readers, and literary enthusiasts alike.</p>
+            </div>
+        
+        </section>
+    </header>
+    <main>
+      
+        <section id="about" class="section-area">
+            <h3> About Us </h3>
+            <div>
+                <p> Our intuitive interface empowers you to track your reading progress, compile personalized bookshelves, and curate your own virtual library. Unleash your inner critic by leaving thoughtful reviews, rating your favorite reads, and exploring recommendations tailored to your unique tastes. </p>
+            </div>
+        </section>
 </div>
-{{/each}}
+            
+        </section>
+        <section id="contact" class="section-area">
+            <h3> Contact Us </h3>
+            <div class="contact-container">
+                <div style="text-align:center">
+                    <p>If you would like to get in touch regarding questions, please leave us a message below :
+                    </p>
+                </div>
+                <div class="contact-row">
+                    <div class="contact-column">
+                        <form onsubmit="sendEmail(); reset(); return false;"
+                        action="/action_page.php">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email..">
+                            <label for="subject">Subject</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:170px"></textarea>
+                            <input type="submit" value="Submit">
+                            </form>
+                        
+                       
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+        </section>
+
+    
+        <footer class="footer-content">
+            <h6>Chapter Chatter</h6>
+            <p> Copyright &copy;2023 <a href=”#”>Chapter Chatter</a> </p>
+        </footer>
+    </main>
