@@ -1,18 +1,22 @@
 [
     {
-      "title": "Harry Potter and the Philosopher's Stone",
-      "author": "J. K. Rowling.",
-      "description": "Harry Potter lives in a cupboard under the stairs at his Aunt and Uncle's house. He is bullied by them and his spoilt cousin, and lives a very unremarkable life. But then Harry is transported to a world of magic and excitement."
+      "title": "Pinch of Nom Budget: Affordable, Delicious Food",
+      "author": "J. K. Kate Allinson.",
+      "description": "",
+      "thumbnail": "http://books.google.com/books/content?id=fsW-EAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      
     },
     {
-      "title": "Music Near Me",
-      "author": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-      "description": ""
+      "title": "The Ink Black Heart: The Number one iternational bestseller (Strike 6) (Strike)",
+      "author": "Robert Galbraith",
+      "description": "",
+      "thumbnail": "http://books.google.com/books/content?id=xG9ZEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
     },
     {
-      "title": "Music Near Me",
-      "author": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-      "description": ""
+      "title": "The Bullet That Missed: (The Thursday Murder Club 3) (The Thursday Murder Club)",
+      "author": "Richard Osman",
+      "description": "",
+      "thumbnail": "http://books.google.com/books/content?id=cinIzgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
     }
     
   ]

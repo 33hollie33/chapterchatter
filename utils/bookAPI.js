@@ -4,6 +4,12 @@ function onClickSearch() {
   const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(
     searchQuery
   )}&key=${apiKey}`;
+  
+  //code gets books based on the genre
+
+  //  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=subject:${encodeURIComponent(
+  //      searchQuery
+  //    )}&key=${apiKey}`;
 
   console.log(apiUrl);
 

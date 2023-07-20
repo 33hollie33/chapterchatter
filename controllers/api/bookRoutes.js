@@ -35,4 +35,8 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+router.post("/book",async(req, res) => {
+  res.json(req.body);
+  console.log(req.body)
+}) 
 module.exports = router;
