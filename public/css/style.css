@@ -65,14 +65,14 @@ transition: 0.6s ease;
 border-bottom: 1px solid brown;
 box-shadow: 5px 10px 30px goldenrod;
 }
-​
+
 .hero {
 display: flex;
 height: 600px;
 width: 100%;
 background-size: auto;
 background-position: center;
-background-image: url("./images/background.jpg");
+background-image: url("/images/background.jpg");
 
 }
 .hero h1 {
@@ -105,7 +105,7 @@ transform: translate(40%, -10%);
 ​
 .hero-image {
 
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url;
 
 background-position: center;
 background-repeat: no-repeat;
@@ -181,7 +181,6 @@ border-bottom: 1px solid brown;
 ​
 .contact-container {
 border-radius: 5px;
-​
 padding: 10px;
 }
 .contact-container p {
@@ -221,7 +220,7 @@ text-align: center;
 ​
 ​
 // BOOKS
-​
+
 ::-webkit-scrollbar {
 width: 3px;
 height: 3px;
