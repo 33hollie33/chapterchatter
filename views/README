@@ -1,0 +1,23 @@
+## DESCRIPTION
+Welcome to Chapter Chatter! This application allows you to explore a vast collection of books using the Google Books API. You can search for books, read their descriptions, leave reviews, and create your personalized reading lists. Here's everything you need to know to get started:
+
+## USAGE
+1. Features
+Book Search: Search for books by title, author, ISBN, or keywords.
+Book Details: View detailed information about each book, including its cover, description, author, and publication details.
+Reviews: Leave reviews for books and read reviews left by other users.
+Reading Lists: Create and manage your reading lists by adding books to them.
+User Accounts: Sign up or log in to have access to personalized features, such as creating reading lists and leaving reviews.
+Responsive Design: The website is designed to be mobile-friendly and accessible on various devices.
+2. Technologies Used
+HTML/CSS: For building the website's user interface and layout.
+JavaScript: To add interactivity and handle API requests.
+Google Books API: To fetch book data, including book information, covers, and reviews.
+
+3. How to Use the Website
+Search Books: Use the search bar on the 'my books' page to search for books. Enter the book title, author's name, ISBN, or relevant keywords.
+View Book Details: Click on a book from the search results to view detailed information about the book, including its cover, description, author, and publication details.
+Leave a Review: To leave a review for a book, you must be logged in. If you don't have an account, sign up to create one. Once logged in, navigate to "Leave a Review" button. share your thoughts in the review form.
+Reading Lists: To create a reading list, you need to be logged in. 
+
+## SCREENSHOTS
