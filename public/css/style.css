@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-​
+
 body {
   height:100%;
   width:100%;
@@ -10,7 +10,7 @@ body {
   text-shadow: white;
   background-color: white;
 }
-​
+
 header {
 display: flex;
 flex-direction: row;
@@ -22,19 +22,19 @@ background-color: white;
 .logo {
 padding: 30px;
 }
-​
+
 a {
 text-decoration: none;
 color: goldenrod;
 
 }
-​
-​
+
+
 input {
 outline: none;
 border: none;
 }
-​
+
 .navbar {
 display: flex;
 justify-content: flex-end;
@@ -116,7 +116,7 @@ background-size: cover;
 position: relative;
 }
 
-​
+
 #about,
 
 .section-area {
@@ -125,14 +125,6 @@ position: relative;
   width: 100%;
   padding: 90px;
 }
-
-​
-​
-
-
-
-
-
 
 .section-area p {
 margin-right: 30px;
@@ -218,10 +210,7 @@ padding: 20px;
 .col-md-7 p {
 color: black;
 }
-​
-​
-​
-​// FOOTER
+/* ​// FOOTER */
 
 .site-footer
 {
@@ -230,7 +219,7 @@ color: black;
   line-height:24px;
   color:#737373;
   position: absolute;;
-  bottom: 0;
+  bottom:0;
 }
 .site-footer hr
 {
@@ -355,10 +344,11 @@ a[href^="https://www.google.com/?hl=en"]
 .copyright-text {
   color: goldenrod
 }
-.site-footer a,
-{
-  color: brown;
+
+.site-footer a {
+  color:brown
 }
+
 .site-footer a:hover
 {
   color:#3366cc;
@@ -450,7 +440,7 @@ a[href^="https://www.google.com/?hl=en"]
 .social-icons a.facebook:hover
 {
   background-color:#3b5998
-=======
+}
 
 ul {
 
@@ -863,7 +853,7 @@ aside {
   padding: 16px;
   width: 100%;
   height: auto;
-}
+}}
 
 article {
   margin: 0;
@@ -878,14 +868,13 @@ article {
 .social-icons a.linkedin:hover
 {
   background-color:#007bb6
-
-
-
+}
 
 @media screen and (max-width: 900px) {
 .column {
     width: 50%;
 
+}
 }
 .social-icons a.dribbble:hover
 {
@@ -900,9 +889,11 @@ article {
     margin-right:0;
     font-weight:600
   }
+}
 
 
 @media screen and (max-width: 600px) {
 .column {
     width: 100%;
-
+    }
+}
