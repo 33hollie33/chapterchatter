@@ -360,7 +360,13 @@
     font-size: 16px;
     color: #1a1a1a;
   }
+    p {
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    line-height: 1.5;
+  }
   
+  /**
   h1,
   h2,
   h3,
