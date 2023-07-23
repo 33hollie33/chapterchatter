@@ -34,7 +34,7 @@ SO THAT children can create their on profiles to looks up books and review them
 Clone the project
 
 ```bash
-  git clone https://github.com/AshtonJ7/ecommerce-backend.git
+  git clone 
 ```
 
 Install dependencies
