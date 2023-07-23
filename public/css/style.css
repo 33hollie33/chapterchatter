@@ -212,7 +212,7 @@ color: black;
 }
 /* ​// FOOTER */
 
-.site-footer
+/* .site-footer
 {
   padding:45px 0 10px;
   font-size:15px;
@@ -226,10 +226,7 @@ color: black;
   border-top-color:#bbb;
   opacity:0.5
 }
-.site-footer hr.small
-
-
-
+.site-footer hr.small */
 
 
 
@@ -895,5 +892,5 @@ article {
 @media screen and (max-width: 600px) {
 .column {
     width: 100%;
-    }
+}
 }
