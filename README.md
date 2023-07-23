@@ -1,5 +1,3 @@
-# Project-2-Books
-
 # Chapter Chatter
 
 Chapter Chatter is a full stack web application made for schools that allows pupils to create an account and search its database of books. Users are able to search through different genres, look up what's currently popular, see new book releases and daily recommendations. Our app also allows useers to create a reading list of what they are currently reading and submit a review of the book.
