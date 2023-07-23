@@ -93,6 +93,10 @@ aside {
   transition: all 0.2s;
 }
 
+.scrolltoview {
+  font-size: 1rem;
+}
+
 .menu {
   display: flex;
   margin: 8px 0;
