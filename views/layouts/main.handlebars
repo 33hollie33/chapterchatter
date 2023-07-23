@@ -7,7 +7,10 @@
   
 
   <link rel="stylesheet" href="../css/jass.css">
-   <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
   <title>Chapter Chatter</title>
 
 </head>
@@ -20,14 +23,14 @@
         <nav class="navbar">
           <a class="active" href="/">Home</a>
 
-            <a href="/books"> My Books</a>
+            <a href="/books"> Browse</a>
 
             <a href="/reviews">Reviews</a>
 
-            <a href="#browse">Browse</a>
+            <a href="/profile">Profile</a>
             <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/profile"></a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
@@ -49,12 +52,23 @@
   {{/if}}
 </body>
 
-       <footer class="footer-content">
-
-            <h6>Chapter Chatter</h6>
-
-            <p> Copyright &copy;2023 <a href=”#”>Chapter Chatter</a> </p>
-
-        </footer>
-
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+         <a href="#">Chapter Chatter</a>.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+</footer>
 </html>
+
