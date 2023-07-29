@@ -67,6 +67,17 @@ border-bottom: 1px solid brown;
 box-shadow: 5px 10px 30px goldenrod;
 }
 
+button {
+  background:	#df4759;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
   /* HERO   */
 
 .hero {
