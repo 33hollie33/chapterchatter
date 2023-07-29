@@ -1,13 +1,13 @@
 # Chapter Chatter
 
-Chapter Chatter is a full stack web application made for schools that allows pupils to create an account and search its database of books. Users are able to search through different genres, look up what's currently popular, see new book releases and daily recommendations. Our app also allows useers to create a reading list of what they are currently reading and submit a review of the book.
+Chapter Chatter is a full stack web application made for schools that allows pupils to create an account and search its database of books. Users are able to search through different genres, look up what's currently popular, see new book releases and daily recommendations. Our app also allows users to create a reading list of what they are currently reading and submit a review of the book.
 
 
 ## User Story
 ```
 AS A small Web Dvelopment company
 WE WANT to build a book catalog website for schools
-SO THAT children can create their on profiles to looks up books and review them
+SO THAT pupils can create their own profiles to looks up books and review them
 ```
 ## Tech Stack
 
@@ -44,19 +44,20 @@ Set up My SQL
 - mysql -u root -p
 - Enter mySQL password
 - source db/schema.sql
+- use chatter_db;
 - QUIT
 ```
 
 Database Seeding 
 
 ```Seed
-node seeds/index.js
+node seeds/seed.js
 ```
 
 Start the server
 
 ```bash
-  npm run start
+  node server.js
 ```
 
 ## Authors
