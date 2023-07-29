@@ -19,15 +19,18 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
      <img src="images/logo.png" alt="logo" width="500x" height="200px" class="logo">
-     
         <nav class="navbar">
-          <a class="active" href="/">Home</a>
+          <input type="checkbox" id="checkbox_toggle" />
+           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+           <div class = "nav-links">
+          <li><a class="active" href="/">Home</a></li>
 
-            <a href="/books"> Browse</a>
+            <li><a href="/books"> Browse</a></li>
 
-            <a href="/reviews">Reviews</a>
+            <li><a href="/reviews">Reviews</a></li>
 
-            <a href="/profile">Profile</a>
+           <li> <a href="/profile">Profile</a></li>
+               
             <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile"></a> |
@@ -36,6 +39,7 @@
         <a href="/login">login</a>
         {{/if}}
         </nav>
+        </div>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->

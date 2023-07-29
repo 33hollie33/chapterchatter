@@ -130,60 +130,30 @@ window.addEventListener("scroll", (event) => {
 const getRandomColor = () =>
   `#${Math.floor(Math.random() * 16777215).toString(16)}40`;
 const toggleSwitch = document.querySelector(
-  '.theme-switch input[type="checkbox"]'
 );
-if (localStorage.getItem("marcdownTheme") == "dark") {
-  document.documentElement.setAttribute("data-theme", "dark");
-  document
-    .querySelector("meta[name=theme-color]")
-    .setAttribute("content", "#090b28");
-  toggleSwitch.checked = true;
-  localStorage.setItem("marcdownTheme", "dark");
-} else {
-  document.documentElement.setAttribute("data-theme", "light");
-  document
-    .querySelector("meta[name=theme-color]")
-    .setAttribute("content", "#ffffff");
-  toggleSwitch.checked = false;
-  localStorage.setItem("marcdownTheme", "light");
+function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
 }
-const switchTheme = ({ target }) => {
-  if (target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    document
-      .querySelector("meta[name=theme-color]")
-      .setAttribute("content", "#090b28");
-    localStorage.setItem("marcdownTheme", "dark");
+
+// function to toggle between light and dark theme
+function toggleTheme() {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-light');
   } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    document
-      .querySelector("meta[name=theme-color]")
-      .setAttribute("content", "#ffffff");
-    localStorage.setItem("marcdownTheme", "light");
+      setTheme('theme-dark');
   }
-};
-toggleSwitch.addEventListener("change", switchTheme, false);
-let startIndex = 0;
-const next = (subject) => {
-  startIndex += 6;
-  if (startIndex >= 0) {
-    document.getElementById(`${subject}-prev`).style.display = "inline-flex";
-    drawChartBook(subject, startIndex);
+}
+
+(function () {
+  if (localStorage.getItem('theme') === 'theme-dark') {
+      setTheme('theme-dark');
+      document.getElementById('slider').checked = false;
   } else {
-    document.getElementById(`${subject}-prev`).style.display = "none";
+      setTheme('theme-light');
+    document.getElementById('slider').checked = true;
   }
-};
-const prev = (subject) => {
-  startIndex -= 6;
-  if (startIndex <= 0) {
-    startIndex = 0;
-    drawChartBook(subject, startIndex);
-    document.getElementById(`${subject}-prev`).style.display = "none";
-  } else {
-    document.getElementById(`${subject}-prev`).style.display = "inline-flex";
-    drawChartBook(subject, startIndex);
-  }
-};
+})();
 
 const searchBook = async (book) => {
   await fetch(`/api/book`, {

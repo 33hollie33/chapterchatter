@@ -63,12 +63,12 @@
           </li>
           <li class="nav trigger"><span class="icon">✨</span>More</li>
         </ul>
-      </nav>
+      </menu>
       <div class="spacer"></div>
-      <label class="theme-switch" for="checkbox" title="Night mode">
-        <input type="checkbox" id="checkbox" aria-label="Night mode" />
-        <div class="slider round"></div>
-      </label>
+     <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
     </aside>
     <main id="main" class="main">
       <article>
@@ -80,9 +80,6 @@
               placeholder="Search books by name, author, genre and etc ..."
               aria-label="Search books"
             />
-            {{!-- <button id="search_button" style="height: 30px" />
-            Search
-            </button> --}}
           </div>
           <div class="list-book search">
             <div class="prompt">Enter a search term</div>
@@ -124,22 +121,6 @@
           <section id="love" class="results">
             <div class="flex">
               <h1 class="section-title">Daily Top 10</h1>
-              <div>
-                <button
-                  id="love-prev"
-                  class="pagination prev"
-                  onclick="prev('love')"
-                >
-                  ◀
-                </button>
-                <button
-                  id="love-next"
-                  class="pagination next"
-                  onclick="next('love')"
-                >
-                  ▶
-                </button>
-              </div>
             </div>
             <div class="list-book love categories">
               <div class="prompt">
@@ -152,22 +133,6 @@
           <section id="feminism" class="results">
             <div class="flex">
               <h1 class="section-title">New releases</h1>
-              <div>
-                <button
-                  id="feminism-prev"
-                  class="pagination prev"
-                  onclick="prev('feminism')"
-                >
-                  ◀
-                </button>
-                <button
-                  id="feminism-next"
-                  class="pagination next"
-                  onclick="next('feminism')"
-                >
-                  ▶
-                </button>
-              </div>
             </div>
             <div class="list-book feminism categories">
               <div class="prompt">
@@ -180,22 +145,6 @@
           <section id="inspirational" class="results">
             <div class="flex">
               <h1 class="section-title">Bestsellers</h1>
-              <div>
-                <button
-                  id="inspirational-prev"
-                  class="pagination prev"
-                  onclick="prev('inspirational')"
-                >
-                  ◀
-                </button>
-                <button
-                  id="inspirational-next"
-                  class="pagination next"
-                  onclick="next('inspirational')"
-                >
-                  ▶
-                </button>
-              </div>
             </div>
             <div class="list-book inspirational categories">
               <div class="prompt">
@@ -208,22 +157,6 @@
           <section id="authors" class="results">
             <div class="flex">
               <h1 class="section-title">Top authors</h1>
-              <div>
-                <button
-                  id="authors-prev"
-                  class="pagination prev"
-                  onclick="prev('authors')"
-                >
-                  ◀
-                </button>
-                <button
-                  id="authors-next"
-                  class="pagination next"
-                  onclick="next('authors')"
-                >
-                  ▶
-                </button>
-              </div>
             </div>
             <div class="list-book authors categories">
               <div class="prompt">
@@ -237,22 +170,6 @@
         <section id="fiction" class="results">
           <div class="flex">
             <h1 class="section-title">Fiction</h1>
-            <div>
-              <button
-                id="fiction-prev"
-                class="pagination prev"
-                onclick="prev('fiction')"
-              >
-                ◀
-              </button>
-              <button
-                id="fiction-next"
-                class="pagination next"
-                onclick="next('fiction')"
-              >
-                ▶
-              </button>
-            </div>
           </div>
           <div class="list-book fiction">
             <div class="prompt">
@@ -263,22 +180,6 @@
         <section id="poetry" class="results">
           <div class="flex">
             <h1 class="section-title">Poetry</h1>
-            <div>
-              <button
-                id="poetry-prev"
-                class="pagination prev"
-                onclick="prev('poetry')"
-              >
-                ◀
-              </button>
-              <button
-                id="poetry-next"
-                class="pagination next"
-                onclick="next('poetry')"
-              >
-                ▶
-              </button>
-            </div>
           </div>
           <div class="list-book poetry">
             <div class="prompt">
@@ -289,22 +190,6 @@
         <section id="fantasy" class="results">
           <div class="flex">
             <h1 class="section-title">Fantasy</h1>
-            <div>
-              <button
-                id="fantasy-prev"
-                class="pagination prev"
-                onclick="prev('fantasy')"
-              >
-                ◀
-              </button>
-              <button
-                id="fantasy-next"
-                class="pagination next"
-                onclick="next('fantasy')"
-              >
-                ▶
-              </button>
-            </div>
           </div>
           <div class="list-book fantasy">
             <div class="prompt">
@@ -315,22 +200,6 @@
         <section id="romance" class="results">
           <div class="flex">
             <h1 class="section-title">Romance</h1>
-            <div>
-              <button
-                id="romance-prev"
-                class="pagination prev"
-                onclick="prev('romance')"
-              >
-                ◀
-              </button>
-              <button
-                id="romance-next"
-                class="pagination next"
-                onclick="next('romance')"
-              >
-                ▶
-              </button>
-            </div>
           </div>
           <div class="list-book romance">
             <div class="prompt">
@@ -339,271 +208,6 @@
           </div>
         </section>
       </article>
-
-<!--
-      <div class="modal">
-        <span class="close-button">✖</span>
-        <div class="modal-content">
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Adult
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Anthologies
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Art
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Audiobooks
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Biographies
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Body
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Business
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Children
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Comics
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Contemporary
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Cooking
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Crime
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Engineering
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Entertainment
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Fantasy
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Fiction
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Food
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            General
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Health
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            History
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Horror
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Investing
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Literary
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Literature
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Manga
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Media-help
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Memoirs
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Mind
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Mystery
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Nonfiction
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Religion
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Religion
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Romance
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Science
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Self
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Spirituality
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Sports
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Superheroes
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Technology
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Thrillers
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Travel
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Women
-          </h3>
-          <h3
-            class="book-authors"
-            onclick='updateFilter(this,"subject");toggleModal();'
-          >
-            Young
-          </h3>
-        </div>
-        -->
       </div>
     </main>
     <script src="/js/app.js"></script>
