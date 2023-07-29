@@ -4,11 +4,11 @@ Chapter Chatter is a full stack web application made for schools that allows pup
 
 
 ## User Story
-
+```
 AS A small Web Dvelopment company
 WE WANT to build a book catalog website for schools
 SO THAT children can create their on profiles to looks up books and review them
-
+```
 ## Tech Stack
 
 **Server:** Node, Express, MySQL database, MySQL2, Sequelize, dotenv
