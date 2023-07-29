@@ -17,8 +17,8 @@ SO THAT children can create their on profiles to looks up books and review them
 
 - HTML
 - CSS
-- webpack
 - Javascript
+- webpack.js
 - Handlebars.js as template engine
 - express-handlebars
 - bcrypt
@@ -65,3 +65,8 @@ Start the server
 - [@Adam-Smart](https://www.github.com/Adam-Smart)
 - [@Shabnamfazly](https://www.github.com/Shabnamfazly)
 - [@AshtonJ7](https://www.github.com/AshtonJ7)
+
+- ## screenshot
+
+![image](https://github.com/AshtonJ7/prework-study-guide/assets/62944042/8848e89e-45fa-469d-8cca-be85818cd4bf)
+
